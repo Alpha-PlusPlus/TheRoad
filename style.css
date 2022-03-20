@@ -30,7 +30,7 @@ html {
     justify-content: center;
 }
 
-/*  */
+/* Container */
 
 .container {
     background-color: var(--secondary-color);
@@ -38,6 +38,8 @@ html {
     overflow: hidden;
     margin: 3.5rem;
 }
+
+/* Header */
 
 .header {
     background: linear-gradient(rgba(18,113,255,.5), rgba(18,113,255,.3)), url(img/header-bg.jpg) center no-repeat;
@@ -156,4 +158,131 @@ html {
         transform: translateZ(40rem);
         opacity: 1;
     }
+}
+
+/* Section 1 Popular Tours */
+
+.popular-tours {
+    padding: 5rem 0 10rem 0;
+}
+
+.popular-tours-heading {
+    color: var(--primary-color);
+    font-size: 8rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    text-shadow: 0 .1rem .2rem var(--primary-color);
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    perspective: 150rem;
+    position: relative;
+    width: 35rem;
+}
+
+.card-img {
+    border-radius: .3rem .3rem 0 0;
+    width: 100%;
+}
+
+.front-side {
+    background-color: var(--white-color);
+    border-radius: .3rem;
+    opacity: .9;
+    position: relative;
+    text-align: center;
+    transition: opacity .4s, transform .4s, box-shadow .4s;
+    z-index: 10;
+}
+
+.change > .front-side {
+    box-shadow: 0 2rem 4rem #777;
+    opacity: .5;
+    transform: translateZ(-5rem) translateX(3rem);
+    z-index: 0;
+}
+
+.tour-name {
+    color: var(--white-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: absolute;
+    right: 1.5rem;
+    text-shadow: 0 0 1rem #000;
+    text-transform: uppercase;
+    top: 30%;
+}
+
+.card-list {
+    margin: auto;
+    padding: 2rem 0 3rem 0;
+    width: 80%;
+}
+
+.card-list-item {
+    border-bottom: .1rem solid var(--primary-color);
+    color: var(--light-gray-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 2rem 0;
+    padding-bottom: 1.5rem;
+}
+
+.back-side {
+    background-color: var(--primary-color);
+    border-radius: .3rem;
+    box-shadow: 0 2rem 4rem #777;
+    flex-direction: column;
+    height: 100%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transform: translateZ(-5rem) translateX(3rem);
+    transition: opacity .4s, transform .4s, box-shadow .4s;
+    width: 100%;
+}
+
+.change > .back-side {
+    box-shadow: 0 .5rem 2rem #aaa;
+    opacity: .9;
+    transform: translateZ(0) translateX(0);
+}
+
+.tour-price {
+    color: var(--white-color);
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.card-button {
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    padding: 1rem 2rem;
+}
+
+.navigation-button {
+    background-color: rgba(255,255,255,.8);
+    border: none;
+    border-radius: .3rem;
+    color: var(--light-gray-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    left: .5rem;
+    letter-spacing: .2rem;
+    padding: .5rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: .5rem;   
 }
