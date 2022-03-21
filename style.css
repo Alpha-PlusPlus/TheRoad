@@ -478,3 +478,43 @@ html {
 		background-color: #3d3d3d;
 	}
 }
+
+/* Footer */
+
+.footer
+{
+	background-color: var(--gray-color);
+	padding: 4rem 0 2rem 0;
+}
+
+.footer-list
+{
+	display: flex;
+	justify-content: center;
+}
+
+.footer-link
+{
+	background-color: var(--gray-color);
+	color: var(--white-color);
+	font-size: 2rem;
+	letter-spacing: .3rem;
+	margin: 0 2rem;
+	padding: .3rem 3rem;
+	transition: all .2s;
+}
+
+.footer-link:hover
+{
+	box-shadow: 0 2rem 3rem #000;
+	transform: rotate(-10deg);
+}
+
+.footer-paragraph
+{
+	color: var(--secondary-color);
+	font-size: 1.5rem;
+	letter-spacing: .2rem;
+	margin-top: 5rem;
+	text-align: center;
+}
