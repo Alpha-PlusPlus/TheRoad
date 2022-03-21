@@ -12,6 +12,7 @@
 
 html {
     font-size: 62.5%; /* 1 rem = 10 px */
+    scroll-behavior: smooth;
 }
 
 /* Common Styles */
@@ -37,6 +38,147 @@ html {
     box-shadow: 0 1rem 3rem var(--gray-color);
     overflow: hidden;
     margin: 3.5rem;
+}
+
+/* Navbar */
+
+.navbar-icon
+{
+	background-color: var(--white-color);
+	border-radius: 50%;
+	cursor: pointer;
+	flex-direction: column;
+	height: 5.5rem;
+	width: 5.5rem;
+}
+
+.open-navbar-icon
+{
+	left: 6.5rem;
+	position: fixed;
+	top: 6.5rem;
+	z-index: 200;
+}
+
+.navbar-icon .line
+{
+	background-color: var(--light-gray-color);
+	height: .2rem;
+	width: 3.5rem;
+}
+
+.open-navbar-icon .line
+{
+	margin: .3rem 0;
+}
+
+.navbar-wrapper
+{
+	background-color: rgba(255,255,255,.7);
+	bottom: -100%;
+	height: 100vh;
+	left: 0;
+	opacity: 0;
+	padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+	position: fixed;
+	transition: bottom .5s, opacity .2s;
+	width: 100vw;
+	z-index: 300;
+}
+
+.change .navbar-wrapper
+{
+	bottom: 0;
+	opacity: 1;
+	transition: bottom .5s, opacity .2s .25s;
+}
+
+.navbar
+{
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.3)), url(img/navbar-bg.jpg) center no-repeat;
+	background-size: cover;
+	height: 100%;
+	overflow-y: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.close-navbar-icon
+{
+	position: absolute;
+	right: 3rem;
+	top: 2.5rem;
+	z-index: 300;
+}
+
+.close-navbar-icon .line
+{
+	position: absolute;
+}
+
+.line-1
+{
+	transform: rotate(40deg);
+}
+
+.line-2
+{
+	transform: rotate(-40deg);
+}
+
+.nav-list
+{
+	display: flex;
+	height: 100%;
+}
+
+.nav-link
+{
+	color: var(--white-color);
+	font-size: 3rem;
+	font-weight: 700;
+	opacity: .8;
+	position: relative;
+	text-transform: uppercase;
+	top: -100%;
+	transition: all .3s;
+	width: 100%;
+}
+
+.change .nav-link
+{
+	top: 0;
+}
+
+.nav-link:hover
+{
+	color: var(--primary-color);
+	opacity: 1;
+}
+
+.change .nav-link:nth-child(1)
+{
+	transition: top 1s .4s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(2)
+{
+	transition: top 1s .6s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(3)
+{
+	transition: top 1s .8s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(4)
+{
+	transition: top 1s 1s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(5)
+{
+	transition: top 1s 1.2s, opacity .3s, color .3s;
 }
 
 /* Header */
